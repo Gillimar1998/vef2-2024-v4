@@ -21,8 +21,8 @@ const GameDetails = () => {
         const gameData = await fetchData(`/games/${id}`);
         setGame(gameData);
         setDate(gameData.date);
-        setHome(gameData.home.id); // Assuming `home` is an object with an `id`
-        setAway(gameData.away.id); // Assuming `away` is an object with an `id`
+        setHome(gameData.home.id);
+        setAway(gameData.away.id);
         setHome_score(gameData.home_score);
         setAway_score(gameData.away_score);
       } catch (error) {

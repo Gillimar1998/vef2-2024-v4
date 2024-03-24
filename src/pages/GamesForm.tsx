@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchData, PostData } from './api'; // Ensure these are correctly implemented
+import { fetchData, PostData } from './api';
 import { Team } from './teams';
 
 const GamesForm: React.FC = () => {
@@ -30,8 +30,6 @@ const GamesForm: React.FC = () => {
 
       await PostData('/games', data);
       window.location.reload();
-      console.log('Game added successfully');
-      // Reset form or provide further user feedback
     } catch (error) {
       console.error('Error posting game:', error);
     }

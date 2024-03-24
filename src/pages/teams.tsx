@@ -55,7 +55,7 @@ const MyTeams: React.FC = () => {
             ))
           ) : (
             <tr>
-              <td colSpan={4}>Sæki lið...</td> {/* "Fetching teams..." */}
+              <td colSpan={4}>Sæki lið...</td> 
             </tr>
           )}
         </tbody>

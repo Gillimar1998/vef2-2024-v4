@@ -10,18 +10,18 @@ export const fetchData = async (path: string) => {
 
 export const PostData = async <T>(path: string, data: T) => {
   const response = await fetch(`${API_URL}${path}`,{
-    method: 'POST', // Specify the method explicitly
+    method: 'POST', 
     headers: {
-      'Content-Type': 'application/json', // Specify the content type in the headers
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data), // Convert the JavaScript object to a JSON string
+    body: JSON.stringify(data),
   });
   
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }
 
-  return await response.json(); // Parse and return the response data as JSON
+  return await response.json();
 
 }
 
@@ -34,10 +34,10 @@ export const deleteData = async (path: string) => {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
 
-  // Check if the response has content before parsing
-  const text = await response.text(); // First, get the response as text
+
+  const text = await response.text(); 
   try {
-    return text ? JSON.parse(text) : {}; // Parse text as JSON if not empty, else return an empty object
+    return text ? JSON.parse(text) : {};
   } catch (error) {
     throw new Error('Failed to parse JSON response');
   }

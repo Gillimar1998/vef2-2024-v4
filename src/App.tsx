@@ -17,20 +17,19 @@ const App: React.FC = () => {
           <nav>
             <ul>
             <li>
-                <Link to="/">Forsíða</Link> {/* Link to navigate to teams */}
+                <Link to="/">Forsíða</Link>
               </li>
               <li>
-                <Link to="/teams">Lið</Link> {/* Link to navigate to teams */}
+                <Link to="/teams">Lið</Link>
               </li>
               <li>
-                <Link to="/games">Leikir</Link> {/* Link to navigate to games */}
+                <Link to="/games">Leikir</Link>
               </li>
             </ul>
           </nav>
         </header>
 
-        {/* A <Routes> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+
         <Routes>
           <Route path="/" element={
             <>
@@ -60,7 +59,6 @@ const App: React.FC = () => {
           } />
            <Route path="/teams/:slug" Component={TeamDetails} />
            <Route path="/games/:id" Component={GameDetails} />
-          {/* Define more routes as needed */}
         </Routes>
       </div>
     </Router>

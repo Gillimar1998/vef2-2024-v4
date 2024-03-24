@@ -10,7 +10,7 @@ export type Game = {
   away: Team;
   home_score: number;
   away_score: number;
-  created: string; // Similarly, using string for datetime fields
+  created: string;
   updated: string;
 };
 

@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import { PostData } from './api'; // Ensure this function is correctly importing
+import { PostData } from './api';
 
 const TeamForm: React.FC = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
     
 
     try {
       const data = { name, description };
       const result = await PostData('/teams', data); 
-      console.log('Team added:', result);
       setName('');
       setDescription('');
 
